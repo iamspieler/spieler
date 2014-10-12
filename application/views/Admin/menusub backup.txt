@@ -1,0 +1,96 @@
+﻿		  	      <ul class="nav nav-pills nav-stacked">
+              <!--
+	      <li class="nav-header"><a href="#"><i class="icon-dashboard"></i><?= __('Dashboard');?></a></li>
+	      <li class="nav-header"><?= __('Contacts'); ?></li>
+              <li <?= (($uri === '/contacts/') or (strpos($uri, '/contacts/page/') !== false) or (strpos($uri, '/contacts/group/') !== false)) ? 'class="active"' : NULL ?>><?= SpHTML::anchor('/contacts','<i class="icon-list"></i>'.__('List')); ?></li>
+              <li <?= $uri === '/contacts/add/' ? 'class="active"' : NULL ?>><?= SpHTML::anchor('/contacts/add','<i class="icon-pencil"></i>'.__('Add_contact')); ?></li>
+	      <li <?= $uri === '/contacts/sections/' ? 'class="active"' : NULL ?>><?= SpHTML::anchor('/contacts/sections','<i class="icon-tasks"></i>'.__('Groups')); ?></li>
+	      <? if((LOGGED_AS == 'root') or (LOGGED_AS == 'admin')) { ?>
+	      <li <?= $uri === '/contacts/sections/add/' ? 'class="active"' : NULL ?>><?= SpHTML::anchor('/contacts/sections/add','<i class="icon-magic"></i>'.__('New_group')); ?></li>
+              <li <?= $uri === '/contacts/uploadfile/' ? 'class="active"' : NULL ?>><?= SpHTML::anchor('/contacts/uploadfile','<i class="icon-file-alt"></i>'.__('Upload_file')); ?></li>
+	      <? } ?>
+	      <li <?= $uri === '/contacts/search/' ? 'class="active"' : NULL ?>>
+		   <a href="#" data-toggle="collapse" data-target="#m_search"><i class="icon-filter"></i> <?= __('Search');?></a>
+		   <div id="m_search" class="collapse out">
+			<form class="form-inline" action="somewhere" method="POST">
+			      <div class="input-append">
+				   <input type="text" class="input-small" id="appendedInputButton" placeholder="<?= __('Name');?>"/><button class="btn" type="submit"><i class="icon-search"></i></button>
+			      </div>
+			</form>
+		   </div>   
+	      </li>
+	      <? if((LOGGED_AS == 'root') or (LOGGED_AS == 'admin')) { ?>
+              <li class="nav-header"><?= __('Users');?></li>
+	      <li <?= $uri === '/'.ADMINURL.'/users/' ? 'class="active"' : NULL ?>><?= SpHTML::anchor('/users','<i class="icon-group"></i>'.__('List')); ?></li>
+	      <li <?= $uri === '/'.ADMINURL.'/users/add/' ? 'class="active"' : NULL ?>><?= SpHTML::anchor('/users/add','<i class="icon-pencil"></i>'.__('Add_user')); ?></li>
+	      <li <?= $uri === '/'.ADMINURL.'/teams/' ? 'class="active"' : NULL ?>><?= SpHTML::anchor('#','<i class="icon-h-sign"></i>'.__('Organizations')); ?></li>
+	      <? } ?>
+	      
+	      <li class="nav-header"><?= __('Files');?></li>
+	      <li <?= $uri === '/files/' ? 'class="active"' : NULL ?>><?= SpHTML::anchor('/files','<i class="icon-group"></i>'.__('List')); ?></li>
+	       <? if((Auth::instance()->logged_in('admin')) or (Auth::instance()->logged_in('root')) or (Auth::instance()->logged_in('manager'))) { ?>
+	      <li <?= $uri === '/files/add/' ? 'class="active"' : NULL ?>><?= SpHTML::anchor('/files/add','<i class="icon-pencil"></i>'.__('Add_file')); ?></li>
+	      <? } ?>
+	      
+	      
+	      <? if((LOGGED_AS == 'root') or (LOGGED_AS == 'admin')) { ?>
+              <li class="nav-header"><?= __('Articles');?></li>
+	      <li <?= $uri === '/'.ADMINURL.'/'.Kohana::$config->load('controllers.articles').'/' ? 'class="active"' : NULL ?>><?= SpHTML::anchor('/'.ADMINURL.'/'.Kohana::$config->load('controllers.articles'),'<i class="icon-list"></i>'.__('Articles_list')); ?></li>
+	      <li <?= $uri === '/'.ADMINURL.'/'.Kohana::$config->load('controllers.articles').'/add/' ? 'class="active"' : NULL ?>><?= SpHTML::anchor('/'.ADMINURL.'/'.Kohana::$config->load('controllers.articles').'/add','<i class="icon-pencil"></i>'.__('Articles_add')); ?></li>
+	      <li <?= $uri === '/'.ADMINURL.'/'.Kohana::$config->load('controllers.articles').'/sections/' ? 'class="active"' : NULL ?>><?= SpHTML::anchor('/'.ADMINURL.'/'.Kohana::$config->load('controllers.articles').'/sections/','<i class="icon-tasks"></i>'.__('Sections')); ?></li>
+	      <li <?= $uri === '/'.ADMINURL.'/'.Kohana::$config->load('controllers.articles').'/editions/' ? 'class="active"' : NULL ?>><?= SpHTML::anchor('/'.ADMINURL.'/'.Kohana::$config->load('controllers.articles').'/editions/','<i class="icon-tasks"></i>'.__('Editions')); ?></li>
+	      <li <?= $uri === '/'.ADMINURL.'/'.Kohana::$config->load('controllers.articles').'/issues/' ? 'class="active"' : NULL ?>><?= SpHTML::anchor('/'.ADMINURL.'/'.Kohana::$config->load('controllers.articles').'/issues/','<i class="icon-tasks"></i>'.__('Issues')); ?></li>
+	      <? } ?>
+	      
+	      <? if((LOGGED_AS == 'root') or (LOGGED_AS == 'admin')) { ?>
+              <li class="nav-header"><?= __('Feedback');?></li>
+	      <li <?= $uri === '/'.ADMINURL.'/'.Kohana::$config->load('controllers.feedback').'/' ? 'class="active"' : NULL ?>><?= SpHTML::anchor('/'.ADMINURL.'/'.Kohana::$config->load('controllers.feedback'),'<i class="icon-list"></i>'.__('Feedback')); ?></li>
+	      <? } ?>
+	      -->
+	      
+	      <? if((LOGGED_AS == 'root') or (LOGGED_AS == 'admin')) { ?>
+              <li class="nav-header"><?= __('Pages_static');?></li>
+	      <li <?= $uri === ADMINURL.'/'.Kohana::$config->load('controllers.pages').'/' ? 'class="active"' : NULL ?>><?= SpHTML::anchor('/'.ADMINURL.'/pages','<i class="icon-list"></i>'.__('Pages_list')); ?></li>
+	      <li <?= $uri === ADMINURL.'/'.Kohana::$config->load('controllers.pages').'/add/' ? 'class="active"' : NULL ?>><?= SpHTML::anchor('/'.ADMINURL.'/pages/add','<i class="icon-pencil"></i>'.__('Pages_add')); ?></li>
+	      <? } ?>
+	      
+	      <? if((LOGGED_AS == 'root') or (LOGGED_AS == 'admin')) { ?>
+              <li class="nav-header"><?= __('Rooms_fund');?></li>
+	      <li <?= $uri === ADMINURL.'/'.Kohana::$config->load('controllers.rooms').'/' ? 'class="active"' : NULL ?>><?= SpHTML::anchor('/'.ADMINURL.'/'.Kohana::$config->load('controllers.rooms'),'<i class="icon-list"></i>'.__('Rooms_list')); ?></li>
+	      <li <?= $uri === ADMINURL.'/'.Kohana::$config->load('controllers.rooms').'/add/' ? 'class="active"' : NULL ?>><?= SpHTML::anchor('/'.ADMINURL.'/'.Kohana::$config->load('controllers.rooms').'/add','<i class="icon-pencil"></i>'.__('Rooms_add')); ?></li>
+	      <? } ?>
+	      <!--
+	      <? if((LOGGED_AS == 'root') or (LOGGED_AS == 'admin')) { ?>
+              <li class="nav-header"><?= __('Blocks');?></li>
+	      <li <?= $uri === '/'.ADMINURL.'/blocks/' ? 'class="active"' : NULL ?>><?= SpHTML::anchor('/'.ADMINURL.'/blocks','<i class="icon-list"></i>'.__('Blocks_list')); ?></li>
+	      <li <?= $uri === '/'.ADMINURL.'/blocks/add/' ? 'class="active"' : NULL ?>><?= SpHTML::anchor('/'.ADMINURL.'/blocks/add','<i class="icon-pencil"></i>'.__('Blocks_add')); ?></li>
+	      <? } ?>
+	      
+	      
+	      <? if((LOGGED_AS == 'root') or (LOGGED_AS == 'admin')) { ?>
+              <li class="nav-header"><?= __('Banners');?></li>
+	      <li <?= $uri === '/'.ADMINURL.'/banners/' ? 'class="active"' : NULL ?>><?= SpHTML::anchor('/'.ADMINURL.'/banners','<i class="icon-list"></i>'.__('Banners_list')); ?></li>
+	      <li <?= $uri === '/'.ADMINURL.'/banners/add/' ? 'class="active"' : NULL ?>><?= SpHTML::anchor('/'.ADMINURL.'/banners/add','<i class="icon-pencil"></i>'.__('Banner_add')); ?></li>
+	      <? } ?>
+	      -->
+	      <? if((LOGGED_AS == 'root') or (LOGGED_AS == 'admin')) { ?>
+              <li class="nav-header"><?= __('Menu');?></li>
+	      <li <?= $uri === '/'.ADMINURL.'/'.Kohana::$config->load('controllers.menu').'/' ? 'class="active"' : NULL ?>><?= SpHTML::anchor('/'.ADMINURL.'/'.Kohana::$config->load('controllers.menu'),'<i class="icon-list"></i>'.__('Menu_list')); ?></li>
+	      <li <?= $uri === '/'.ADMINURL.'/'.Kohana::$config->load('controllers.menu').'/add/' ? 'class="active"' : NULL ?>><?= SpHTML::anchor('/'.ADMINURL.'/'.Kohana::$config->load('controllers.menu').'/add','<i class="icon-pencil"></i>'.__('Menu_add')); ?></li>
+	      <? } ?>
+	      <!--
+	      <? if((LOGGED_AS == 'root') or (LOGGED_AS == 'admin')) { ?>
+              <li class="nav-header"><?= __('Brands');?></li>
+	      <li <?= $uri === '/'.ADMINURL.'/brands/' ? 'class="active"' : NULL ?>><?= SpHTML::anchor('/'.ADMINURL.'/brands','<i class="icon-list"></i>'.__('Brands_list')); ?></li>
+	      <li <?= $uri === '/'.ADMINURL.'/brands/add/' ? 'class="active"' : NULL ?>><?= SpHTML::anchor('/'.ADMINURL.'/brands/add','<i class="icon-pencil"></i>'.__('Brand_add')); ?></li>
+	      <li <?= $uri === '/'.ADMINURL.'/brands/sections/' ? 'class="active"' : NULL ?>><?= SpHTML::anchor('/'.ADMINURL.'/brands/sections','<i class="icon-tasks"></i>'.__('Sections')); ?></li>
+	      <li <?= $uri === '/'.ADMINURL.'/brands/positions/' ? 'class="active"' : NULL ?>><?= SpHTML::anchor('/'.ADMINURL.'/brands/positions','<i class="icon-map-marker"></i>'.__('Map')); ?></li>
+	      <? } ?>
+	      
+	      <? if((LOGGED_AS == 'root') or (LOGGED_AS == 'admin')) { ?>
+              <li class="nav-header"><?= __('Video');?></li>
+	      <li <?= $uri === '/'.ADMINURL.'/video/' ? 'class="active"' : NULL ?>><?= SpHTML::anchor('/'.ADMINURL.'/video','<i class="icon-list"></i>'.__('Video_list')); ?></li>
+	      <li <?= $uri === '/'.ADMINURL.'/video/add/' ? 'class="active"' : NULL ?>><?= SpHTML::anchor('/'.ADMINURL.'/video/add','<i class="icon-pencil"></i>'.__('Video_add')); ?></li>
+	      <? } ?>
+	       -->
+	    </ul>

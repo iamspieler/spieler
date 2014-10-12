@@ -1,0 +1,3 @@
+<?php die();?>
+
+1406695218 [critical] message: "Log_Exception [ 0 ]: log file E:\OpenServer\domains\localhost\spieler\application\logs\30.07.2014.php not exists ~ MODPATH\kohana-log\classes\controller\log.php [ 35 ]" client: 127.0.0.1 uri: /spieler/log referer: "" agent: "Opera/9.80 (Windows NT 5.1) Presto/2.12.388 Version/12.17" cookie: "array (  'KCFINDER_displaySettings' => 'on',  'KCFINDER_view' => 'thumbs',  'PHPSESSID' => 'il3b3k401o4f8gp7pd4o1lpdi6',  'session' => '3q736q8m38vc8210tt40v0d6k5',)" 

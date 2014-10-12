@@ -1,0 +1,4 @@
+<?php die();?>
+
+1407604564 [critical] message: "ErrorException [ 1 ]: Class 'Model_Rooms' not found ~ SYSPATH\classes\Kohana\Model.php [ 26 ]" client: 127.0.0.1 uri: /spieler/panel/rooms/?_pjax=true/ referer: http://localhost/spieler/panel/ agent: "Opera/9.80 (Windows NT 5.1) Presto/2.12.388 Version/12.17" cookie: "array (  'KCFINDER_displaySettings' => 'on',  'KCFINDER_view' => 'thumbs',  'session' => '3mj66hjpej33a7jb323rpgmba7',)" 
+1407604565 [critical] message: "ErrorException [ 1 ]: Class 'Model_Rooms' not found ~ SYSPATH\classes\Kohana\Model.php [ 26 ]" client: 127.0.0.1 uri: /spieler/panel/rooms/ referer: http://localhost/spieler/panel/ agent: "Opera/9.80 (Windows NT 5.1) Presto/2.12.388 Version/12.17" cookie: "array (  'KCFINDER_displaySettings' => 'on',  'KCFINDER_view' => 'thumbs',  'session' => '3mj66hjpej33a7jb323rpgmba7',)" 

@@ -1,0 +1,166 @@
+<?php defined('SYSPATH') OR die('No direct script access.'); ?>
+
+2014-06-04 10:41:12 --- CRITICAL: ErrorException [ 8 ]: Undefined index: lang ~ SYSPATH\classes\Kohana\Validation.php [ 102 ] in D:\OpenServer\domains\localhost\kohana3\system\classes\Kohana\Validation.php:102
+2014-06-04 10:41:12 --- DEBUG: #0 D:\OpenServer\domains\localhost\kohana3\system\classes\Kohana\Validation.php(102): Kohana_Core::error_handler(8, 'Undefined index...', 'D:\OpenServer\d...', 102, Array)
+#1 D:\OpenServer\domains\localhost\spieler\application\classes\controller\Common.php(25): Kohana_Validation->offsetGet('lang')
+#2 D:\OpenServer\domains\localhost\kohana3\system\classes\Kohana\Controller.php(69): Controller_Common->before()
+#3 [internal function]: Kohana_Controller->execute()
+#4 D:\OpenServer\domains\localhost\kohana3\system\classes\Kohana\Request\Client\Internal.php(97): ReflectionMethod->invoke(Object(Controller_Blog))
+#5 D:\OpenServer\domains\localhost\kohana3\system\classes\Kohana\Request\Client.php(114): Kohana_Request_Client_Internal->execute_request(Object(Request), Object(Response))
+#6 D:\OpenServer\domains\localhost\kohana3\system\classes\Kohana\Request.php(986): Kohana_Request_Client->execute(Object(Request))
+#7 D:\OpenServer\domains\localhost\spieler\index.php(109): Kohana_Request->execute()
+#8 {main} in D:\OpenServer\domains\localhost\kohana3\system\classes\Kohana\Validation.php:102
+2014-06-04 10:52:32 --- CRITICAL: ErrorException [ 4 ]: syntax error, unexpected T_STRING, expecting ',' or ';' ~ APPPATH\classes\controller\Blog.php [ 23 ] in file:line
+2014-06-04 10:52:32 --- DEBUG: #0 [internal function]: Kohana_Core::shutdown_handler()
+#1 {main} in file:line
+2014-06-04 10:52:33 --- CRITICAL: ErrorException [ 4 ]: syntax error, unexpected T_STRING, expecting ',' or ';' ~ APPPATH\classes\controller\Blog.php [ 23 ] in file:line
+2014-06-04 10:52:33 --- DEBUG: #0 [internal function]: Kohana_Core::shutdown_handler()
+#1 {main} in file:line
+2014-06-04 14:59:34 --- CRITICAL: Database_Exception [ 1054 ]: Unknown column 'item_title_en, item_text_en, item_text_full_en' in 'field list' [ SELECT `id_item`, `item_title_en, item_text_en, item_text_full_en`, `item_url`, `item_picture`, `item_publish_date`, Group_concat(site_sblog_sections.section_url SEPARATOR '::::') sect_ids, Group_concat(site_sblog_sections.section_title SEPARATOR '::::') sect_names  FROM `site_sblog_items` INNER JOIN `site_sblog_is` ON (`site_sblog_items`.`id_item` = `site_sblog_is`.`item_id`) INNER JOIN `site_sblog_sections` ON (`site_sblog_is`.`section_id` = `site_sblog_sections`.`id_section`) WHERE `item_status` = '1' AND `section_status` = 1 AND `item_publish_date`  ~ MODPATH\database\classes\Kohana\Database\MySQL.php [ 194 ] in D:\OpenServer\domains\localhost\kohana3\modules\database\classes\Kohana\Database\Query.php:251
+2014-06-04 14:59:34 --- DEBUG: #0 D:\OpenServer\domains\localhost\kohana3\modules\database\classes\Kohana\Database\Query.php(251): Kohana_Database_MySQL->query(1, 'SELECT `id_item...', false, Array)
+#1 D:\OpenServer\domains\localhost\spieler\application\classes\model\Blog.php(564): Kohana_Database_Query->execute()
+#2 D:\OpenServer\domains\localhost\spieler\application\classes\controller\Blog.php(46): Model_Blog->get_items('1', 0, 'en')
+#3 D:\OpenServer\domains\localhost\kohana3\system\classes\Kohana\Controller.php(84): Controller_Blog->action_index()
+#4 [internal function]: Kohana_Controller->execute()
+#5 D:\OpenServer\domains\localhost\kohana3\system\classes\Kohana\Request\Client\Internal.php(97): ReflectionMethod->invoke(Object(Controller_Blog))
+#6 D:\OpenServer\domains\localhost\kohana3\system\classes\Kohana\Request\Client.php(114): Kohana_Request_Client_Internal->execute_request(Object(Request), Object(Response))
+#7 D:\OpenServer\domains\localhost\kohana3\system\classes\Kohana\Request.php(986): Kohana_Request_Client->execute(Object(Request))
+#8 D:\OpenServer\domains\localhost\spieler\index.php(109): Kohana_Request->execute()
+#9 {main} in D:\OpenServer\domains\localhost\kohana3\modules\database\classes\Kohana\Database\Query.php:251
+2014-06-04 14:59:49 --- CRITICAL: Database_Exception [ 1054 ]: Unknown column 'item_title, item_text, item_text_full' in 'field list' [ SELECT `id_item`, `item_title, item_text, item_text_full`, `item_url`, `item_picture`, `item_publish_date`, Group_concat(site_sblog_sections.section_url SEPARATOR '::::') sect_ids, Group_concat(site_sblog_sections.section_title SEPARATOR '::::') sect_names  FROM `site_sblog_items` INNER JOIN `site_sblog_is` ON (`site_sblog_items`.`id_item` = `site_sblog_is`.`item_id`) INNER JOIN `site_sblog_sections` ON (`site_sblog_is`.`section_id` = `site_sblog_sections`.`id_section`) WHERE `item_status` = '1' AND `section_status` = 1 AND `item_publish_date`  ~ MODPATH\database\classes\Kohana\Database\MySQL.php [ 194 ] in D:\OpenServer\domains\localhost\kohana3\modules\database\classes\Kohana\Database\Query.php:251
+2014-06-04 14:59:49 --- DEBUG: #0 D:\OpenServer\domains\localhost\kohana3\modules\database\classes\Kohana\Database\Query.php(251): Kohana_Database_MySQL->query(1, 'SELECT `id_item...', false, Array)
+#1 D:\OpenServer\domains\localhost\spieler\application\classes\model\Blog.php(564): Kohana_Database_Query->execute()
+#2 D:\OpenServer\domains\localhost\spieler\application\classes\controller\Blog.php(46): Model_Blog->get_items('1', 0, 'ru')
+#3 D:\OpenServer\domains\localhost\kohana3\system\classes\Kohana\Controller.php(84): Controller_Blog->action_index()
+#4 [internal function]: Kohana_Controller->execute()
+#5 D:\OpenServer\domains\localhost\kohana3\system\classes\Kohana\Request\Client\Internal.php(97): ReflectionMethod->invoke(Object(Controller_Blog))
+#6 D:\OpenServer\domains\localhost\kohana3\system\classes\Kohana\Request\Client.php(114): Kohana_Request_Client_Internal->execute_request(Object(Request), Object(Response))
+#7 D:\OpenServer\domains\localhost\kohana3\system\classes\Kohana\Request.php(986): Kohana_Request_Client->execute(Object(Request))
+#8 D:\OpenServer\domains\localhost\spieler\index.php(109): Kohana_Request->execute()
+#9 {main} in D:\OpenServer\domains\localhost\kohana3\modules\database\classes\Kohana\Database\Query.php:251
+2014-06-04 15:00:24 --- CRITICAL: ErrorException [ 8 ]: Undefined offset: 1 ~ MODPATH\database\classes\Kohana\Database.php [ 507 ] in D:\OpenServer\domains\localhost\kohana3\modules\database\classes\Kohana\Database.php:507
+2014-06-04 15:00:24 --- DEBUG: #0 D:\OpenServer\domains\localhost\kohana3\modules\database\classes\Kohana\Database.php(507): Kohana_Core::error_handler(8, 'Undefined offse...', 'D:\OpenServer\d...', 507, Array)
+#1 [internal function]: Kohana_Database->quote_column(Array)
+#2 D:\OpenServer\domains\localhost\kohana3\modules\database\classes\Kohana\Database\Query\Builder\Select.php(354): array_map(Array, Array)
+#3 D:\OpenServer\domains\localhost\kohana3\modules\database\classes\Kohana\Database\Query.php(234): Kohana_Database_Query_Builder_Select->compile(Object(Database_MySQL))
+#4 D:\OpenServer\domains\localhost\spieler\application\classes\model\Blog.php(564): Kohana_Database_Query->execute()
+#5 D:\OpenServer\domains\localhost\spieler\application\classes\controller\Blog.php(46): Model_Blog->get_items('1', 0, 'ru')
+#6 D:\OpenServer\domains\localhost\kohana3\system\classes\Kohana\Controller.php(84): Controller_Blog->action_index()
+#7 [internal function]: Kohana_Controller->execute()
+#8 D:\OpenServer\domains\localhost\kohana3\system\classes\Kohana\Request\Client\Internal.php(97): ReflectionMethod->invoke(Object(Controller_Blog))
+#9 D:\OpenServer\domains\localhost\kohana3\system\classes\Kohana\Request\Client.php(114): Kohana_Request_Client_Internal->execute_request(Object(Request), Object(Response))
+#10 D:\OpenServer\domains\localhost\kohana3\system\classes\Kohana\Request.php(986): Kohana_Request_Client->execute(Object(Request))
+#11 D:\OpenServer\domains\localhost\spieler\index.php(109): Kohana_Request->execute()
+#12 {main} in D:\OpenServer\domains\localhost\kohana3\modules\database\classes\Kohana\Database.php:507
+2014-06-04 15:00:31 --- CRITICAL: ErrorException [ 8 ]: Undefined offset: 1 ~ MODPATH\database\classes\Kohana\Database.php [ 507 ] in D:\OpenServer\domains\localhost\kohana3\modules\database\classes\Kohana\Database.php:507
+2014-06-04 15:00:31 --- DEBUG: #0 D:\OpenServer\domains\localhost\kohana3\modules\database\classes\Kohana\Database.php(507): Kohana_Core::error_handler(8, 'Undefined offse...', 'D:\OpenServer\d...', 507, Array)
+#1 [internal function]: Kohana_Database->quote_column(Array)
+#2 D:\OpenServer\domains\localhost\kohana3\modules\database\classes\Kohana\Database\Query\Builder\Select.php(354): array_map(Array, Array)
+#3 D:\OpenServer\domains\localhost\kohana3\modules\database\classes\Kohana\Database\Query.php(234): Kohana_Database_Query_Builder_Select->compile(Object(Database_MySQL))
+#4 D:\OpenServer\domains\localhost\spieler\application\classes\model\Blog.php(564): Kohana_Database_Query->execute()
+#5 D:\OpenServer\domains\localhost\spieler\application\classes\controller\Blog.php(46): Model_Blog->get_items('1', 0, 'en')
+#6 D:\OpenServer\domains\localhost\kohana3\system\classes\Kohana\Controller.php(84): Controller_Blog->action_index()
+#7 [internal function]: Kohana_Controller->execute()
+#8 D:\OpenServer\domains\localhost\kohana3\system\classes\Kohana\Request\Client\Internal.php(97): ReflectionMethod->invoke(Object(Controller_Blog))
+#9 D:\OpenServer\domains\localhost\kohana3\system\classes\Kohana\Request\Client.php(114): Kohana_Request_Client_Internal->execute_request(Object(Request), Object(Response))
+#10 D:\OpenServer\domains\localhost\kohana3\system\classes\Kohana\Request.php(986): Kohana_Request_Client->execute(Object(Request))
+#11 D:\OpenServer\domains\localhost\spieler\index.php(109): Kohana_Request->execute()
+#12 {main} in D:\OpenServer\domains\localhost\kohana3\modules\database\classes\Kohana\Database.php:507
+2014-06-04 15:01:35 --- CRITICAL: Database_Exception [ 1054 ]: Unknown column 'item_title_".site_$lang."' in 'field list' [ SELECT `id_item`, `item_title_"`.`site_$lang`.`"` AS `item_text_".$lang."`, `item_url`, `item_picture`, `item_publish_date`, Group_concat(site_sblog_sections.section_url SEPARATOR '::::') sect_ids, Group_concat(site_sblog_sections.section_title SEPARATOR '::::') sect_names  FROM `site_sblog_items` INNER JOIN `site_sblog_is` ON (`site_sblog_items`.`id_item` = `site_sblog_is`.`item_id`) INNER JOIN `site_sblog_sections` ON (`site_sblog_is`.`section_id` = `site_sblog_sections`.`id_section`) WHERE `item_status` = '1' AND `section_status` = 1 AND `item_publish_date`  ~ MODPATH\database\classes\Kohana\Database\MySQL.php [ 194 ] in D:\OpenServer\domains\localhost\kohana3\modules\database\classes\Kohana\Database\Query.php:251
+2014-06-04 15:01:35 --- DEBUG: #0 D:\OpenServer\domains\localhost\kohana3\modules\database\classes\Kohana\Database\Query.php(251): Kohana_Database_MySQL->query(1, 'SELECT `id_item...', false, Array)
+#1 D:\OpenServer\domains\localhost\spieler\application\classes\model\Blog.php(564): Kohana_Database_Query->execute()
+#2 D:\OpenServer\domains\localhost\spieler\application\classes\controller\Blog.php(46): Model_Blog->get_items('1', 0, 'en')
+#3 D:\OpenServer\domains\localhost\kohana3\system\classes\Kohana\Controller.php(84): Controller_Blog->action_index()
+#4 [internal function]: Kohana_Controller->execute()
+#5 D:\OpenServer\domains\localhost\kohana3\system\classes\Kohana\Request\Client\Internal.php(97): ReflectionMethod->invoke(Object(Controller_Blog))
+#6 D:\OpenServer\domains\localhost\kohana3\system\classes\Kohana\Request\Client.php(114): Kohana_Request_Client_Internal->execute_request(Object(Request), Object(Response))
+#7 D:\OpenServer\domains\localhost\kohana3\system\classes\Kohana\Request.php(986): Kohana_Request_Client->execute(Object(Request))
+#8 D:\OpenServer\domains\localhost\spieler\index.php(109): Kohana_Request->execute()
+#9 {main} in D:\OpenServer\domains\localhost\kohana3\modules\database\classes\Kohana\Database\Query.php:251
+2014-06-04 15:02:06 --- CRITICAL: Database_Exception [ 1054 ]: Unknown column 'item_title_".site_$lang."' in 'field list' [ SELECT `id_item`, `item_title_"`.`site_$lang`.`"` AS `item_text_".$lang."`, `item_url`, `item_picture`, `item_publish_date`, Group_concat(site_sblog_sections.section_url SEPARATOR '::::') sect_ids, Group_concat(site_sblog_sections.section_title SEPARATOR '::::') sect_names  FROM `site_sblog_items` INNER JOIN `site_sblog_is` ON (`site_sblog_items`.`id_item` = `site_sblog_is`.`item_id`) INNER JOIN `site_sblog_sections` ON (`site_sblog_is`.`section_id` = `site_sblog_sections`.`id_section`) WHERE `item_status` = '1' AND `section_status` = 1 AND `item_publish_date`  ~ MODPATH\database\classes\Kohana\Database\MySQL.php [ 194 ] in D:\OpenServer\domains\localhost\kohana3\modules\database\classes\Kohana\Database\Query.php:251
+2014-06-04 15:02:06 --- DEBUG: #0 D:\OpenServer\domains\localhost\kohana3\modules\database\classes\Kohana\Database\Query.php(251): Kohana_Database_MySQL->query(1, 'SELECT `id_item...', false, Array)
+#1 D:\OpenServer\domains\localhost\spieler\application\classes\model\Blog.php(566): Kohana_Database_Query->execute()
+#2 D:\OpenServer\domains\localhost\spieler\application\classes\controller\Blog.php(46): Model_Blog->get_items('1', 0, 'en')
+#3 D:\OpenServer\domains\localhost\kohana3\system\classes\Kohana\Controller.php(84): Controller_Blog->action_index()
+#4 [internal function]: Kohana_Controller->execute()
+#5 D:\OpenServer\domains\localhost\kohana3\system\classes\Kohana\Request\Client\Internal.php(97): ReflectionMethod->invoke(Object(Controller_Blog))
+#6 D:\OpenServer\domains\localhost\kohana3\system\classes\Kohana\Request\Client.php(114): Kohana_Request_Client_Internal->execute_request(Object(Request), Object(Response))
+#7 D:\OpenServer\domains\localhost\kohana3\system\classes\Kohana\Request.php(986): Kohana_Request_Client->execute(Object(Request))
+#8 D:\OpenServer\domains\localhost\spieler\index.php(109): Kohana_Request->execute()
+#9 {main} in D:\OpenServer\domains\localhost\kohana3\modules\database\classes\Kohana\Database\Query.php:251
+2014-06-04 15:02:18 --- CRITICAL: ErrorException [ 8 ]: Undefined index: item_title ~ APPPATH\views\Blog\List.php [ 26 ] in D:\OpenServer\domains\localhost\spieler\application\views\Blog\List.php:26
+2014-06-04 15:02:18 --- DEBUG: #0 D:\OpenServer\domains\localhost\spieler\application\views\Blog\List.php(26): Kohana_Core::error_handler(8, 'Undefined index...', 'D:\OpenServer\d...', 26, Array)
+#1 D:\OpenServer\domains\localhost\kohana3\system\classes\Kohana\View.php(61): include('D:\OpenServer\d...')
+#2 D:\OpenServer\domains\localhost\kohana3\system\classes\Kohana\View.php(348): Kohana_View::capture('D:\OpenServer\d...', Array)
+#3 D:\OpenServer\domains\localhost\kohana3\system\classes\Kohana\View.php(228): Kohana_View->render()
+#4 D:\OpenServer\domains\localhost\spieler\application\views\Main.php(59): Kohana_View->__toString()
+#5 D:\OpenServer\domains\localhost\kohana3\system\classes\Kohana\View.php(61): include('D:\OpenServer\d...')
+#6 D:\OpenServer\domains\localhost\kohana3\system\classes\Kohana\View.php(348): Kohana_View::capture('D:\OpenServer\d...', Array)
+#7 D:\OpenServer\domains\localhost\kohana3\system\classes\Kohana\Controller\Template.php(44): Kohana_View->render()
+#8 D:\OpenServer\domains\localhost\kohana3\system\classes\Kohana\Controller.php(87): Kohana_Controller_Template->after()
+#9 [internal function]: Kohana_Controller->execute()
+#10 D:\OpenServer\domains\localhost\kohana3\system\classes\Kohana\Request\Client\Internal.php(97): ReflectionMethod->invoke(Object(Controller_Blog))
+#11 D:\OpenServer\domains\localhost\kohana3\system\classes\Kohana\Request\Client.php(114): Kohana_Request_Client_Internal->execute_request(Object(Request), Object(Response))
+#12 D:\OpenServer\domains\localhost\kohana3\system\classes\Kohana\Request.php(986): Kohana_Request_Client->execute(Object(Request))
+#13 D:\OpenServer\domains\localhost\spieler\index.php(109): Kohana_Request->execute()
+#14 {main} in D:\OpenServer\domains\localhost\spieler\application\views\Blog\List.php:26
+2014-06-04 15:02:30 --- CRITICAL: ErrorException [ 8 ]: Undefined index: item_title ~ APPPATH\views\Blog\List.php [ 26 ] in D:\OpenServer\domains\localhost\spieler\application\views\Blog\List.php:26
+2014-06-04 15:02:30 --- DEBUG: #0 D:\OpenServer\domains\localhost\spieler\application\views\Blog\List.php(26): Kohana_Core::error_handler(8, 'Undefined index...', 'D:\OpenServer\d...', 26, Array)
+#1 D:\OpenServer\domains\localhost\kohana3\system\classes\Kohana\View.php(61): include('D:\OpenServer\d...')
+#2 D:\OpenServer\domains\localhost\kohana3\system\classes\Kohana\View.php(348): Kohana_View::capture('D:\OpenServer\d...', Array)
+#3 D:\OpenServer\domains\localhost\kohana3\system\classes\Kohana\View.php(228): Kohana_View->render()
+#4 D:\OpenServer\domains\localhost\spieler\application\views\Main.php(59): Kohana_View->__toString()
+#5 D:\OpenServer\domains\localhost\kohana3\system\classes\Kohana\View.php(61): include('D:\OpenServer\d...')
+#6 D:\OpenServer\domains\localhost\kohana3\system\classes\Kohana\View.php(348): Kohana_View::capture('D:\OpenServer\d...', Array)
+#7 D:\OpenServer\domains\localhost\kohana3\system\classes\Kohana\Controller\Template.php(44): Kohana_View->render()
+#8 D:\OpenServer\domains\localhost\kohana3\system\classes\Kohana\Controller.php(87): Kohana_Controller_Template->after()
+#9 [internal function]: Kohana_Controller->execute()
+#10 D:\OpenServer\domains\localhost\kohana3\system\classes\Kohana\Request\Client\Internal.php(97): ReflectionMethod->invoke(Object(Controller_Blog))
+#11 D:\OpenServer\domains\localhost\kohana3\system\classes\Kohana\Request\Client.php(114): Kohana_Request_Client_Internal->execute_request(Object(Request), Object(Response))
+#12 D:\OpenServer\domains\localhost\kohana3\system\classes\Kohana\Request.php(986): Kohana_Request_Client->execute(Object(Request))
+#13 D:\OpenServer\domains\localhost\spieler\index.php(109): Kohana_Request->execute()
+#14 {main} in D:\OpenServer\domains\localhost\spieler\application\views\Blog\List.php:26
+2014-06-04 15:04:04 --- CRITICAL: Database_Exception [ 1054 ]: Unknown column 'item_title,item_text,item_text_full' in 'field list' [ SELECT `id_item`, `item_title,item_text,item_text_full`, `item_url`, `item_picture`, `item_publish_date`, Group_concat(site_sblog_sections.section_url SEPARATOR '::::') sect_ids, Group_concat(site_sblog_sections.section_title SEPARATOR '::::') sect_names  FROM `site_sblog_items` INNER JOIN `site_sblog_is` ON (`site_sblog_items`.`id_item` = `site_sblog_is`.`item_id`) INNER JOIN `site_sblog_sections` ON (`site_sblog_is`.`section_id` = `site_sblog_sections`.`id_section`) WHERE `item_status` = '1' AND `section_status` = 1 AND `item_publish_date`  ~ MODPATH\database\classes\Kohana\Database\MySQL.php [ 194 ] in D:\OpenServer\domains\localhost\kohana3\modules\database\classes\Kohana\Database\Query.php:251
+2014-06-04 15:04:04 --- DEBUG: #0 D:\OpenServer\domains\localhost\kohana3\modules\database\classes\Kohana\Database\Query.php(251): Kohana_Database_MySQL->query(1, 'SELECT `id_item...', false, Array)
+#1 D:\OpenServer\domains\localhost\spieler\application\classes\model\Blog.php(570): Kohana_Database_Query->execute()
+#2 D:\OpenServer\domains\localhost\spieler\application\classes\controller\Blog.php(46): Model_Blog->get_items('1', 0, 'ru')
+#3 D:\OpenServer\domains\localhost\kohana3\system\classes\Kohana\Controller.php(84): Controller_Blog->action_index()
+#4 [internal function]: Kohana_Controller->execute()
+#5 D:\OpenServer\domains\localhost\kohana3\system\classes\Kohana\Request\Client\Internal.php(97): ReflectionMethod->invoke(Object(Controller_Blog))
+#6 D:\OpenServer\domains\localhost\kohana3\system\classes\Kohana\Request\Client.php(114): Kohana_Request_Client_Internal->execute_request(Object(Request), Object(Response))
+#7 D:\OpenServer\domains\localhost\kohana3\system\classes\Kohana\Request.php(986): Kohana_Request_Client->execute(Object(Request))
+#8 D:\OpenServer\domains\localhost\spieler\index.php(109): Kohana_Request->execute()
+#9 {main} in D:\OpenServer\domains\localhost\kohana3\modules\database\classes\Kohana\Database\Query.php:251
+2014-06-04 15:04:16 --- CRITICAL: ErrorException [ 2 ]: explode() expects parameter 2 to be string, array given ~ APPPATH\classes\model\Blog.php [ 551 ] in file:line
+2014-06-04 15:04:16 --- DEBUG: #0 [internal function]: Kohana_Core::error_handler(2, 'explode() expec...', 'D:\OpenServer\d...', 551, Array)
+#1 D:\OpenServer\domains\localhost\spieler\application\classes\model\Blog.php(551): explode(',', Array)
+#2 D:\OpenServer\domains\localhost\spieler\application\classes\controller\Blog.php(46): Model_Blog->get_items('1', 0, 'ru')
+#3 D:\OpenServer\domains\localhost\kohana3\system\classes\Kohana\Controller.php(84): Controller_Blog->action_index()
+#4 [internal function]: Kohana_Controller->execute()
+#5 D:\OpenServer\domains\localhost\kohana3\system\classes\Kohana\Request\Client\Internal.php(97): ReflectionMethod->invoke(Object(Controller_Blog))
+#6 D:\OpenServer\domains\localhost\kohana3\system\classes\Kohana\Request\Client.php(114): Kohana_Request_Client_Internal->execute_request(Object(Request), Object(Response))
+#7 D:\OpenServer\domains\localhost\kohana3\system\classes\Kohana\Request.php(986): Kohana_Request_Client->execute(Object(Request))
+#8 D:\OpenServer\domains\localhost\spieler\index.php(109): Kohana_Request->execute()
+#9 {main} in file:line
+2014-06-04 15:04:21 --- CRITICAL: Database_Exception [ 1054 ]: Unknown column 'item_title,item_text,item_text_full' in 'field list' [ SELECT `id_item`, `item_title,item_text,item_text_full`, `item_url`, `item_picture`, `item_publish_date`, Group_concat(site_sblog_sections.section_url SEPARATOR '::::') sect_ids, Group_concat(site_sblog_sections.section_title SEPARATOR '::::') sect_names  FROM `site_sblog_items` INNER JOIN `site_sblog_is` ON (`site_sblog_items`.`id_item` = `site_sblog_is`.`item_id`) INNER JOIN `site_sblog_sections` ON (`site_sblog_is`.`section_id` = `site_sblog_sections`.`id_section`) WHERE `item_status` = '1' AND `section_status` = 1 AND `item_publish_date`  ~ MODPATH\database\classes\Kohana\Database\MySQL.php [ 194 ] in D:\OpenServer\domains\localhost\kohana3\modules\database\classes\Kohana\Database\Query.php:251
+2014-06-04 15:04:21 --- DEBUG: #0 D:\OpenServer\domains\localhost\kohana3\modules\database\classes\Kohana\Database\Query.php(251): Kohana_Database_MySQL->query(1, 'SELECT `id_item...', false, Array)
+#1 D:\OpenServer\domains\localhost\spieler\application\classes\model\Blog.php(570): Kohana_Database_Query->execute()
+#2 D:\OpenServer\domains\localhost\spieler\application\classes\controller\Blog.php(46): Model_Blog->get_items('1', 0, 'ru')
+#3 D:\OpenServer\domains\localhost\kohana3\system\classes\Kohana\Controller.php(84): Controller_Blog->action_index()
+#4 [internal function]: Kohana_Controller->execute()
+#5 D:\OpenServer\domains\localhost\kohana3\system\classes\Kohana\Request\Client\Internal.php(97): ReflectionMethod->invoke(Object(Controller_Blog))
+#6 D:\OpenServer\domains\localhost\kohana3\system\classes\Kohana\Request\Client.php(114): Kohana_Request_Client_Internal->execute_request(Object(Request), Object(Response))
+#7 D:\OpenServer\domains\localhost\kohana3\system\classes\Kohana\Request.php(986): Kohana_Request_Client->execute(Object(Request))
+#8 D:\OpenServer\domains\localhost\spieler\index.php(109): Kohana_Request->execute()
+#9 {main} in D:\OpenServer\domains\localhost\kohana3\modules\database\classes\Kohana\Database\Query.php:251
+2014-06-04 15:04:33 --- CRITICAL: Database_Exception [ 1054 ]: Unknown column 'item_title,item_text,item_text_full' in 'field list' [ SELECT `id_item`, `item_title,item_text,item_text_full`, `item_url`, `item_picture`, `item_publish_date`, Group_concat(site_sblog_sections.section_url SEPARATOR '::::') sect_ids, Group_concat(site_sblog_sections.section_title SEPARATOR '::::') sect_names  FROM `site_sblog_items` INNER JOIN `site_sblog_is` ON (`site_sblog_items`.`id_item` = `site_sblog_is`.`item_id`) INNER JOIN `site_sblog_sections` ON (`site_sblog_is`.`section_id` = `site_sblog_sections`.`id_section`) WHERE `item_status` = '1' AND `section_status` = 1 AND `item_publish_date`  ~ MODPATH\database\classes\Kohana\Database\MySQL.php [ 194 ] in D:\OpenServer\domains\localhost\kohana3\modules\database\classes\Kohana\Database\Query.php:251
+2014-06-04 15:04:33 --- DEBUG: #0 D:\OpenServer\domains\localhost\kohana3\modules\database\classes\Kohana\Database\Query.php(251): Kohana_Database_MySQL->query(1, 'SELECT `id_item...', false, Array)
+#1 D:\OpenServer\domains\localhost\spieler\application\classes\model\Blog.php(570): Kohana_Database_Query->execute()
+#2 D:\OpenServer\domains\localhost\spieler\application\classes\controller\Blog.php(46): Model_Blog->get_items('1', 0, 'ru')
+#3 D:\OpenServer\domains\localhost\kohana3\system\classes\Kohana\Controller.php(84): Controller_Blog->action_index()
+#4 [internal function]: Kohana_Controller->execute()
+#5 D:\OpenServer\domains\localhost\kohana3\system\classes\Kohana\Request\Client\Internal.php(97): ReflectionMethod->invoke(Object(Controller_Blog))
+#6 D:\OpenServer\domains\localhost\kohana3\system\classes\Kohana\Request\Client.php(114): Kohana_Request_Client_Internal->execute_request(Object(Request), Object(Response))
+#7 D:\OpenServer\domains\localhost\kohana3\system\classes\Kohana\Request.php(986): Kohana_Request_Client->execute(Object(Request))
+#8 D:\OpenServer\domains\localhost\spieler\index.php(109): Kohana_Request->execute()
+#9 {main} in D:\OpenServer\domains\localhost\kohana3\modules\database\classes\Kohana\Database\Query.php:251
